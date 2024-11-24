@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adpedrer <adpedrer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 15:29:36 by adpedrer          #+#    #+#             */
-/*   Updated: 2024/08/17 17:57:29 by adpedrer         ###   ########.fr       */
+/*   Updated: 2024/11/24 16:10:02 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	error(int err)
 
 void	variable_init(t_minitalk *list, int *init)
 {
+	list->byte = 0;
 	list->msg = NULL;
 	list->len = 0;
 	list->check = 0;
@@ -50,7 +51,6 @@ void	variable_reset(t_minitalk *list, int *init)
 	list->len = 0;
 	list->byte_index = 0;
 	list->bit_index = 0;
-	list->bit_count = 0;
 }
 
 void	traceroute_server(pid_t pid_client)

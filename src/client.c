@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adpedrer <adpedrer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/15 12:23:50 by adpedrer          #+#    #+#             */
-/*   Updated: 2024/08/15 19:05:36 by adpedrer         ###   ########.fr       */
+/*   Updated: 2024/11/24 16:06:50 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	main(int tokens, char **msg)
 	sa.sa_sigaction = process_signal_client;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
+	if (ft_strlen(msg[2]) == 0)
+		error(2);
 	transmit_len(pid, ft_strlen(msg[2]));
 	transmit_msg(pid, msg[2], ft_strlen(msg[2]));
 	return (0);
@@ -35,7 +37,7 @@ void	process_signal_client(int sig, siginfo_t *info, void *context)
 {
 	(void)info;
 	(void)context;
-	if (sig == SIGUSR2 || sig == SIGUSR1)
+	if (sig == SIGUSR1)
 		g_var = 0;
 }
 
@@ -53,7 +55,7 @@ void	transmit_len(pid_t pid, int len)
 	i = 31;
 	while (i >= 0)
 	{
-		if (len & (1 << i))
+		if (len & (1U << i))
 		{
 			if (kill(pid, SIGUSR2) == -1)
 				error(-1);
@@ -63,7 +65,6 @@ void	transmit_len(pid_t pid, int len)
 			if (kill(pid, SIGUSR1) == -1)
 				error(-1);
 		}
-		usleep(1000);
 		traceroute_client();
 		i--;
 	}
@@ -74,25 +75,25 @@ void	transmit_msg(pid_t pid, char *msg, int len)
 	int	i;
 	int	j;
 
-	j = 0;
-	while (len > 0)
+	i = 0;
+	while (i < len)
 	{
-		i = 7;
-		while (i >= 0)
+		j = 7;
+		while (j >= 0)
 		{
-			if (msg[j] & (1 << i))
+			if (msg[i] & (1 << j))
 			{
-				kill(pid, SIGUSR2);
+				if (kill(pid, SIGUSR2) == -1)
+					error(-1);
 			}
 			else
 			{
-				kill(pid, SIGUSR1);
+				if (kill(pid, SIGUSR1) == -1)
+					error(-1);
 			}
-			usleep(1000);
 			traceroute_client();
-			i--;
+			j--;
 		}
-		j++;
-		len--;
+		i++;
 	}
 }

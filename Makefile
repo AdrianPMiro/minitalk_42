@@ -2,7 +2,7 @@ NAME_C = client
 NAME_S = server
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3 #-fsanitize=address -fsanitize=undefined
+CFLAGS = #-Wall -Wextra -Werror -g3 #-fsanitize=address -fsanitize=undefined
 
 SRC_DIR = src
 SRC_FILES = client.c server.c utils.c

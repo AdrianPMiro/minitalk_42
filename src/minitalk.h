@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adpedrer <adpedrer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: adrian <adrian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 12:56:52 by adpedrer          #+#    #+#             */
-/*   Updated: 2024/08/17 17:25:34 by adpedrer         ###   ########.fr       */
+/*   Updated: 2024/11/24 16:09:06 by adrian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_minitalk
 	int				bit_count;
 	unsigned int	bit_index;
 	unsigned int	byte_index;
+	unsigned char	byte;
 }	t_minitalk;
 
 //server
