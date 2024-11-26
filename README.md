@@ -63,8 +63,7 @@ cliente
    - Envía una señal de vuelta al cliente para confirmar la recepción de cada bit, asegurando la sincronización.
 
 ---
-
-### Diagrama de Flujo
+### 📊 Diagrama de Flujo
 
 ```mermaid
 sequenceDiagram
@@ -73,6 +72,7 @@ sequenceDiagram
     Servidor->>Cliente: Envía confirmación (SIGUSR1)
     Cliente->>Servidor: Envía siguiente bit
     Servidor->>Salida estándar: Muestra el mensaje reconstruido
+
 
 ## 🛠️ **Instrucciones de instalación**
 
