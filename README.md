@@ -119,7 +119,10 @@ En resumen, este proyecto fue una excelente oportunidad para profundizar en conc
 ---
 
    ```
-   /\_/\
-   ( o.o )
-   > ^ <
+   /\_/\      /\_/\
+  ( o.o )    ( o.o ) 
+   > ^ <      > ^ <
+
+  Miau...    Mew??
+
    ```
