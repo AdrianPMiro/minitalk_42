@@ -37,8 +37,8 @@ Minitalk/
 ├── Makefile      # Herramienta de compilación
 ├── libft/        # Biblioteca auxiliar (si es necesaria)
 └── README.md     # Este documento
-
 ---
+
 ## 📖 **Funcionamineto tecnico**
 
 ### Cliente
