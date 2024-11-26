@@ -100,3 +100,21 @@ sequenceDiagram
 Reemplaza [server_pid] con el PID del servidor y "mensaje" con el texto a enviar.
 
 3. El servidor debería mostrar el mensaje recibido en la salida estándar.
+
+---
+
+## 📌 Conclusión
+
+Con este proyecto he aprendido a utilizar señales de UNIX para la comunicación entre procesos, lo que me ha permitido profundizar en el funcionamiento de los sistemas operativos y las redes. También he mejorado mis habilidades en la gestión de memoria y la organización de código para asegurar que todo funcione correctamente. Además, he adquirido una comprensión más profunda sobre cómo sincronizar y manejar la comunicación entre el cliente y el servidor de manera eficiente.
+
+En resumen, este proyecto fue una excelente oportunidad para profundizar en conceptos clave a nivel practico que son esenciales para comprender cómo funcionan los sistemas y las redes.
+
+---
+
+## 😺 ¡Y un gato feliz para terminar!
+   
+   ```
+   /\_/\
+   ( o.o )
+   > ^ <
+   ```
