@@ -31,15 +31,16 @@ El objetivo principal de este proyecto es crear un programa cliente-servidor que
 ## 📁 **Estructura del proyecto**
 
 ```bash
-Minitalk/
-├── client.c      # Código fuente del cliente
+cliente
 ├── server.c      # Código fuente del servidor
 ├── Makefile      # Herramienta de compilación
 ├── libft/        # Biblioteca auxiliar (si es necesaria)
 └── README.md     # Este documento
+```
+
 ---
 
-## 📖 **Funcionamineto tecnico**
+📖 **Funcionamineto tecnico**
 
 ### Cliente
 
