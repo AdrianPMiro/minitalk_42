@@ -38,6 +38,7 @@ Minitalk/
 ├── libft/        # Biblioteca auxiliar (si es necesaria)
 └── README.md     # Este documento
 
+---
 ## 📖 **Funcionamineto tecnico**
 
 ### Cliente
@@ -71,7 +72,6 @@ sequenceDiagram
     Servidor->>Cliente: Envía confirmación (SIGUSR1)
     Cliente->>Servidor: Envía siguiente bit
     Servidor->>Salida estándar: Muestra el mensaje reconstruido
-
 
 ## 🛠️ **Instrucciones de instalación**
 
