@@ -67,11 +67,18 @@ cliente
 
 ```mermaid
 sequenceDiagram
-    Cliente->>Servidor: Envía señal (SIGUSR1/SIGUSR2)
-    Servidor->>Servidor: Procesa bit recibido
+    Cliente->>+Servidor: Envía señal (SIGUSR1/SIGUSR2)
+    Servidor->>+Servidor: Procesa bit recibido y determina valor (0 o 1)
+    Servidor->>+Memoria: Almacena bit en buffer temporal
+    Servidor->>Servidor: Verifica si se ha recibido todo el mensaje
     Servidor->>Cliente: Envía confirmación (SIGUSR1)
-    Cliente->>Servidor: Envía siguiente bit
-    Servidor->>Salida estándar: Muestra el mensaje reconstruido
+    Cliente->>Servidor: Envía siguiente bit (SIGUSR1/SIGUSR2)
+    loop Procesamiento de mensaje
+        Servidor->>Memoria: Almacena bit
+        Servidor->>+Servidor: Verifica si el mensaje está completo
+    end
+    Servidor->>+Pantalla: Imprime el mensaje completo
+
 ```
 
 ## 🛠️ **Instrucciones de instalación**
