@@ -118,8 +118,6 @@ En resumen, este proyecto fue una excelente oportunidad para profundizar en conc
 
 ---
 
-## 😺 ¡Y un gato feliz para terminar!
-   
    ```
    /\_/\
    ( o.o )
