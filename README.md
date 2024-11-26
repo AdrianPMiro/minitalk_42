@@ -79,8 +79,10 @@ sequenceDiagram
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/tuusuario/Minitalk.git && cd Minitalk
+```
 
 2. Compila el proyecto:
+
    ```bash
    make
 ```
