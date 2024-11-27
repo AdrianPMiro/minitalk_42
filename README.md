@@ -1,6 +1,6 @@
 # Minitalk
 
-### 🏆**42 Project**
+### 🏆 **42 Project**
 
 **Minitalk** es un proyecto diseñado para demostrar habilidades en comunicación entre procesos utilizando señales de UNIX. Implementa un sistema de cliente-servidor en el que el cliente envía mensajes al servidor, que luego los muestra en la salida estándar.
 
