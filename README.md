@@ -85,7 +85,7 @@ sequenceDiagram
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/Minitalk.git && cd Minitalk
+   git clone https://github.com/AdrianPMiro/minitalk_42.git && cd minitalk_42
    ```
 
 2. Compila el proyecto:
